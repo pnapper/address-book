@@ -16,7 +16,7 @@ Contact.prototype.fullName = function() {
 
 $(document).ready(function() {
   $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">') +
+    $("#new-addresses").append('<div class="new-address">' +
                                 '<div class="form-group">' +
                                   '<label for="new-street">Street</label>' +
                                   '<input type="text" class="form-control new-street">' +
@@ -63,5 +63,8 @@ $(document).ready(function() {
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
+    $("input.new-street").val("");
+    $("input.new-city").val("");
+    $("input.new-state").val("");
   });
 });
