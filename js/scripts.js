@@ -32,8 +32,8 @@ $(document).ready(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
                                 '<div class="form-group">' +
-                                  '<label for="addressType">Type</label>' +
-                                  '<input type="text" class="form-control new-addressType">' +
+                                  '<label for="new-addressType">Type</label>' +
+                                  '<select class="form-control" id="new-addressType"><option>Home</option><option>Office</option><option>Other</option></select>' +
                                 '</div>' +
                                 '<div class="form-group">' +
                                   '<label for="new-street">Street</label>' +
@@ -59,7 +59,8 @@ $(document).ready(function() {
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
     $(".new-address").each(function() {
-      var inputtedType = $(this).find("input.new-addressType").val();
+      var inputtedType = $(this).find("#new-addressType").val();
+      console.log(inputtedType);
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
